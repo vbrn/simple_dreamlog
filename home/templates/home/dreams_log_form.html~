@@ -1,0 +1,31 @@
+{% load bootstrap3 %}
+
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{% bootstrap_messages %}
+
+<form method="post" class="form">{% csrf_token %}
+        {% bootstrap_form form layout="horizontal" %}
+{% buttons submit='OK' reset='Cancel' layout='horizontal' %}{% endbuttons %}  
+</form>
+
+
+<form role="form" class="form-inline" method="post">
+        {% csrf_token %}
+        {% bootstrap_form form layout='inline' %}
+        {% buttons submit='OK' reset='Cancel' layout='inline' %}{% endbuttons %}
+    </form>
+
+
+
+    {% bootstrap_button 'button' size='xs' %}
+    {% bootstrap_button 'submit' size='sm' %}
+    {% bootstrap_button 'reset' size='small' %}
+    {% bootstrap_button 'link' size='md' %}
+    {% bootstrap_button 'button' size='lg' %}
+    {% bootstrap_button 'button' size='lg' icon='info-sign' %} <!-- ref for icons https://getbootstrap.com/docs/3.3/components/-->
+
+{% bootstrap_alert "Something went danger" alert_type='danger' %}
+{% bootstrap_alert "Something went info" alert_type='info' %}
+{% bootstrap_alert "Something went warning" alert_type='warning' %}
+{% bootstrap_alert "Something went success" alert_type='success' %}

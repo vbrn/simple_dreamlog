@@ -1,0 +1,13 @@
+
+{{dreams_log.title }}<br>
+{{dreams_log.created_at }}<br>
+{{dreams_log.created_by }}<br>
+{{dreams_log.content}}<br>
+
+<a href="{% url 'update' pk=dreams_log.pk %}">редактировать</a>
+<a href="{% url 'delete' pk=dream_log.pk %}">удалить</a>
+<br><br><br>
+<a href="{% url 'home' %}">Хоумь</a>
+<a href="{% url 'create' %}">Создать Сонъ</a>
+
+

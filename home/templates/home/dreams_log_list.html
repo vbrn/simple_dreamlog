@@ -1,0 +1,18 @@
+
+<ol>
+<a href="{% url 'create' %}">Создать Сонъ</a><br><br>
+
+
+{% for dream in object_list %}
+
+<strong><li>{{ dream.created_at }}</li></strong><br>
+<a href="{% url 'post' dream.pk %}" >{{ dream.title }}</a><br>
+<em>{{ dream.created_by }}</em><br>
+<a href="{% url 'update' pk=dream.pk %}">редактировать</a>
+<a href="{% url 'delete' pk=dream.pk %}">удалить</a>
+
+<br><br>
+
+{% endfor %}
+
+<ol>

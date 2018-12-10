@@ -1,0 +1,6 @@
+<form action="post">{% csrf_token %}
+<p>Ти збираєся дєліти {{object}}</p>
+<input type="submit" value="Згоден дєліти?"/>
+</form>
+
+<a href="{% url 'home' %}">Кам Бэк То Хоумь</a>

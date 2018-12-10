@@ -1,0 +1,8 @@
+from django.forms import forms
+from .models import Dreams_log
+
+
+class DreamForm(forms.Form):
+    class Meta:
+        model= Dreams_log
+        fields = ['title', 'content','rating','created_by']
